@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mainBox{
+            position: relative;
+            width: 25vw;
+            height: 25vh;
+            background-color: #15172b;
+            border: 1px solid #eee;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn{
+            width: 50px;
+            height: 50px;
+            background-color: #eee;
+            border-radius: 50%;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="mainBox">
+            <button class="btn 1" onclick="myFunction(this)">1</button>
+            <button class="btn 2" onclick="myFunction(this)">2</button>
+            <button class="btn 3" onclick="myFunction(this)">3</button>
+            <button class="btn 4" onclick="myFunction(this)">4</button>
+        </div>
+    </div>
+
+
+    <script>
+        let btn = document.querySelectorAll(".btn");
+
+        // function myFunction(e) {
+        //     console.time('Start')
+        //     for(let i=0;i<btn.length;i++){
+        //         btn[i].style.background = null;
+        //     }
+        //     e.style.background = "red";
+        //     console.timeEnd('Start')
+        // }
+        
+
+        function myFunction(e)
+        {
+            console.time('rahul')
+            for(let i = 0; i < btn.length; i++)
+            {
+                if(e.className == btn[i].className)
+                {
+                    let button = e;
+                    button.style.background="Red";
+                }
+                else
+                {
+                    btn[i].style.background=null;
+                }
+            }
+            console.timeEnd('rahul')
+        }
+        
+           
+       
+
+        //26-08-2021
+    </script>
+</body>
+</html>

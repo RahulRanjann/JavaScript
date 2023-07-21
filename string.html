@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text"  id="inputData" placeholder="Enter a word">
+    <p id="ouput"></p>
+    <button id="btn" onclick="myFunction()">split it </button>
+    
+    <script>
+        let btn = document.getElementById("btn");
+        function myFunction()
+        {
+            
+           let arr=[];
+           let count = 0;
+           let val = document.getElementById("inputData").value;
+            for(i= 0; i<val; i++)
+            {
+                
+                if(val[i]!=" ")
+                {
+                    arr[count] =arr[count]+val[i];
+                    console.log("i'm if \n"+arr[count]);
+                }
+                else{
+                    count++;
+                    console.log("i'm else \n"+arr[count]);
+                }
+            }
+        }
+        
+
+        
+    </script>
+</body>
+</html>
