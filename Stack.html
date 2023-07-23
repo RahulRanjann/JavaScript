@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #231942;
+        }
+
+        .colored-div {
+            width: 200px;
+            height: 100px;
+            border-style: solid;
+            border-width: 10px;
+            border-color: white green blue yellow;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .value {
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            border: 2px solid #ccc;
+            padding: 5px;
+            margin: 5px;
+            outline: none;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .value:focus {
+            border-color: #5E548E;
+
+        }
+
+        /*.frame{
+           display: flex;
+            justify-content: center;
+            align-items: center;
+        } */
+
+        /* Basic button styles */
+        .btn {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+
+        /* Hover effect */
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        .btn:active {
+            background-color: #5E548E;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="frame">
+            <div class="main">
+                <h3>Enter a value to push in stack: </h3>
+                <input type="text" class="value">
+                <button class="btn" type="submit">push</button>
+                <hr>
+                <div class="Stack">
+
+                    <div class="stackBox">
+                       <div class="stack">
+
+                       </div>
+                    </div>
+                    <div class="pop">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    let btn = document.querySelector(".btn");
+    btn.addEventListener("click", function () {
+        let value = document.querySelector(".value").value;
+        let stack = document.querySelector(".stack");
+        let pop = document.querySelector(".pop");
+        let stackBox = document.querySelector(".stackBox");
+        let div = document.createElement("div");
+        document.getElementsByClassName("stack").innerHTML=document.getElementsByClassName("value").value;
+    });
+    
+</script>
+
+</body>
+
+</html>
