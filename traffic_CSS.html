@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic_Light</title>
+    <style>
+        html {
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(to top, #5d5e5f 0%, #4d4d4d 100%);
+        }
+
+        p {
+            font-family: 'Rocher';
+            font-size: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .trafficBox {
+            position: relative;
+            width: 25vw;
+            height: auto;
+            background-color: #323233;
+            border: 1px solid #eee;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ledBox {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .led {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #eee;
+            border-radius: 50%;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #red {
+            border: 1px solid red;
+        }
+
+        #yellow {
+            border: 1px solid yellow;
+        }
+
+        #green {
+            border: 1px solid green;
+        }
+
+        #red:hover {
+            background-color: rgb(255, 57, 57);
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 5px 15px rgba(182, 92, 92, 0.4);
+        }
+
+     
+
+        #yellow:hover {
+            background-color: rgb(255, 255, 0);
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 5px 15px rgba(179, 182, 92, 0.4);
+        }
+
+        #green:hover {
+            background-color: rgb(0, 255, 0);
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 5px 15px rgba(92, 182, 93, 0.4);
+        }
+
+
+
+        .ledControll {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            border: 2px solid black;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .ledControll .green:hover {
+            background-color: rgb(0, 255, 0);
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 5px 15px rgba(92, 182, 93, 0.4);
+        }
+
+        .ledControll .yellow:hover {
+            background-color: rgb(255, 255, 0);
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 5px 15px rgba(179, 182, 92, 0.4);
+        }
+
+        .ledControll .red:hover {
+            background-color: rgb(255, 57, 57);
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 5px 15px rgba(182, 92, 92, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <p>Traffic_Light</p>
+    <div class="main">
+        <div class="container">
+            <div class="trafficBox">
+                <div class="ledBox">
+                    <div class="led" id="red">Stop</div>
+                    <div class="led" id="yellow">Ready</div>
+                    <div class="led" id="green">Go</div>
+                </div>
+                <div class="ledControll">
+                    <button class="red" id="btn" onclick="myFunction(this)">Red</button>
+                    <button class="yellow" id="btn" onclick="myFunction(this)">Yellow</button>
+                    <button class="green" id="btn" onclick="myFunction(this)">Green</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    
+</body>
+
+</html>
